@@ -3,36 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Information Block</title>
+    <title>Latent Dirichlet Allocation Info Box</title>
     <style>
-        .info-block {
-            border: 1px solid #e0e0e0;
-            padding: 16px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
+        body {
             font-family: Arial, sans-serif;
-            max-width: 400px;
-            margin: 20px auto;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        .info-block h3 {
-            margin-top: 0;
-            color: #333;
+        .info-box {
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            padding: 20px;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
         }
-        .info-block p {
-            margin: 8px 0;
-        }
-        .info-block strong {
+        .title {
+            font-size: 18px;
             font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 15px;
+        }
+        .info-content {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-label {
+            font-weight: bold;
+            width: 120px;
+            flex-shrink: 0;
+        }
+        .info-value {
+            flex: 1;
         }
     </style>
 </head>
 <body>
-    <div class="info-block">
-        <h3>Latent Dirichlet Allocation</h3>
-        <p><strong>Definition:</strong> A Bayesian network and generative statistical model used for modeling automatically extracted topics in textual corpora.</p>
-        <p><strong>Domain:</strong> Natural language processing</p>
-        <p><strong>Function:</strong> Observations (e.g., words) are collected into documents, with each word's presence attributable to one of the document's topics.</p>
-        <p><strong>Topics Handling:</strong> Each document contains a small number of topics, facilitating topic analysis and content categorization.</p>
+    <div class="info-box">
+        <div class="title">Latent Dirichlet allocation</div>
+        <div class="subtitle">A generative statistical model in natural language processing</div>
+        <div class="info-content">
+            <div class="info-row">
+                <div class="info-label">Definition</div>
+                <div class="info-value">A Bayesian network and generative statistical model used for modeling automatically extracted topics in textual corpora.</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Domain</div>
+                <div class="info-value">Natural language processing</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Function</div>
+                <div class="info-value">Observations (e.g., words) are collected into documents, with each word's presence attributable to one of the document's topics.</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Topics handling</div>
+                <div class="info-value">Each document contains a small number of topics, facilitating topic analysis and content categorization.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
